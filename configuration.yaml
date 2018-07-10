@@ -1,0 +1,121 @@
+homeassistant:
+  # Name of the location where Home Assistant is running
+  name: Home
+  # Location required to calculate the time the sun rises and sets
+  latitude: 39.217471
+  longitude: -84.271748
+  # Impacts weather/sunrise data (altitude above sea level in meters)
+  elevation: 238
+  # metric for Metric, imperial for Imperial
+  unit_system: imperial
+  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone: America/New_York
+  # Customization file
+  customize: !include_dir_merge_named customizations
+
+# Show links to resources in log and frontend
+#introduction:
+
+# Enables the frontend
+frontend:
+
+# Enables configuration UI
+config:
+
+weather:
+  - platform: darksky
+    api_key: !secret darksky_apikey
+
+http:
+  # Secrets are defined in the file secrets.yaml
+  # api_password: !secret http_password
+  # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
+  # base_url: example.duckdns.org:8123
+
+# Checks for available updates
+# Note: This component will send some information about your system to
+# the developers to assist with development of Home Assistant.
+# For more information, please see:
+# https://home-assistant.io/blog/2016/10/25/explaining-the-updater/
+updater:
+  # Optional, allows Home Assistant developers to focus on popular components.
+  # include_used_components: true
+
+# Discover some devices automatically
+discovery:
+
+# Allows you to issue voice commands from the frontend in enabled browsers
+conversation:
+
+# Enables support for tracking state changes over time
+history:
+
+# View all events in a logbook
+logbook:
+
+# Enables a map showing the location of tracked devices
+#map:
+
+# Track the sun
+#sun:
+
+## Weather prediction
+#sensor:
+#  - platform: yr
+#    name: Weather
+#    forecast: 24
+#    monitored_conditions:
+#      - temperature
+#      - symbol
+#      - precipitation
+#      - windSpeed
+#      - pressure
+#      - windDirection
+#      - humidity
+#      - fog
+#      - cloudiness
+#      - lowClouds
+#      - mediumClouds
+#      - highClouds
+#      - dewpointTemperature
+
+# Text to speech
+tts:
+  - platform: google
+
+# Z-Wave
+zwave:
+  usb_path: /dev/ttyACM0
+  network_key: !secret zwave_key
+  #network_key: "0xd5, 0x9f, 0xc8, 0xc5, 0x56, 0xf2, 0x4b, 0x38, 0x9e, 0x53, 0x34, 0x67, 0x3a, 0x90, 0xf9, 0xd1"
+
+# MQTT Broker
+mqtt:
+  broker: core-mosquitto
+
+panel_iframe:
+  configurator:
+    title: Configurator
+    icon: mdi:wrench
+    url: http://172.24.1.3:3218/
+  nodered:
+    title: Node-Red
+    icon: mdi:node-red
+    url: http://172.24.1.3:1880/
+
+# Cloud
+cloud:
+
+####################################################
+#                                                  #
+#                     Includes                     #
+#                                                  #
+####################################################
+
+###  Devices  ###
+group: !include groups.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml
+light: !include lights.yaml
+switch: !include switches.yaml
+

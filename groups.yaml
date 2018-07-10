@@ -1,0 +1,33 @@
+default_view:
+  view: yes
+  icon: mdi:home
+  entities:
+    - weather.dark_sky
+    - group.entraces
+    - group.kids_room
+    - group.basement
+    - group.outside
+kids_room:
+  name: Kid's Room
+#  view: yes
+  entities:
+    - light.kids_room_light
+    - light.kids_closet_light
+basement:
+  name: Basement
+#  view: yes
+  entities:
+    - light.basement_stairs_light
+outside:
+  name: Outside Lights
+#  view: yes
+  entities:
+    - light.outside_flood_light__north
+entraces:
+  name: Entrances
+  entities:
+    - lock.kwikset_touchpad_electronic_deadbolt_locked
+weather:
+  name: Weather
+  entities:
+    - weather.dark_sky

@@ -1,0 +1,51 @@
+#light.kids_closet_light: 
+- platform: mqtt
+  name: "Kid's Closet Light"
+  state_topic: "stat/sonoff-kids-closet/POWER"
+  command_topic: "cmnd/sonoff-kids-closet/POWER"
+  availability_topic: "tele/sonoff-kids-closet/LWT"
+  qos: 1
+  payload_on: "ON"
+  payload_off: "OFF"
+  payload_available: "Online"
+  payload_not_available: "Offline"
+  retain: false
+
+#light.basement_stairs_light: 
+- platform: mqtt
+  name: "Basement Stairs Light"
+  state_topic: "stat/sonoff-basement-stairs-upper/POWER"
+  command_topic: "cmnd/sonoff-basement-stairs-upper/POWER"
+  availability_topic: "tele/sonoff-basement-stairs-upper/LWT"
+  qos: 1
+  payload_on: "ON"
+  payload_off: "OFF"
+  payload_available: "Online"
+  payload_not_available: "Offline"
+  retain: false
+
+#light.kids_room_light: 
+- platform: mqtt
+  name: "Kid's Room Light"
+  state_topic: "stat/sonoff-kids-room-light/POWER"
+  command_topic: "cmnd/sonoff-kids-room-light/POWER"
+  availability_topic: "tele/sonoff-kids-room-light/LWT"
+  qos: 1
+  payload_on: "ON"
+  payload_off: "OFF"
+  payload_available: "Online"
+  payload_not_available: "Offline"
+  retain: false
+
+#light.outside_flood_light_north: 
+- platform: mqtt
+  name: "Outside Flood Light - North"
+  state_topic: "stat/sonoff-north-flood-light/POWER"
+  command_topic: "cmnd/sonoff-north-flood-light/POWER"
+  availability_topic: "tele/sonoff-north-flood-light/LWT"
+  qos: 1
+  payload_on: "ON"
+  payload_off: "OFF"
+  payload_available: "Online"
+  payload_not_available: "Offline"
+  retain: false

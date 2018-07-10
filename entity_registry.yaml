@@ -1,0 +1,150 @@
+media_player.living_room_speaker:
+  config_entry_id: 3060d8da1ee6472ead8bb2ae77f312b9
+  name:
+  platform: cast
+  unique_id: a6afa355-1756-b27d-dae8-e33b2b084944
+media_player.plex_web_chrome:
+  config_entry_id:
+  name:
+  platform: plex
+  unique_id: 5s70mpb0s98f96rqpeavjsil
+media_player.chrome:
+  config_entry_id:
+  name:
+  platform: plex
+  unique_id: 6dn3ijx0xbig8pg8j3z84au9
+zwave.aeotec_zw090_zstick_gen5_us:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: node-1
+zwave.ge_45605_duplex_receptacle:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: node-2
+switch.ge_45605_duplex_receptacle_switch:
+  config_entry_id:
+  name: Television Power Outlet
+  platform: zwave
+  unique_id: 2-72057594076282880
+zwave.ge_45605_duplex_receptacle_2:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: node-3
+switch.ge_45605_duplex_receptacle_switch_2:
+  config_entry_id:
+  name: Back Door Power Outlet
+  platform: zwave
+  unique_id: 3-72057594093060096
+zwave.linear_wd500z1_wall_dimmer_switch:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: node-4
+light.linear_wd500z1_wall_dimmer_switch_level:
+  config_entry_id:
+  name: Hallway Lights
+  platform: zwave
+  unique_id: 4-72057594109853697
+zwave.linear_wt00z1_3way_wall_accessory_switch:
+  config_entry_id:
+  name: Hallway Alt Switch - Linear WT00Z-1
+  platform: zwave
+  unique_id: node-5
+switch.linear_wt00z1_3way_wall_accessory_switch_switch:
+  config_entry_id:
+  name: Hallways Alt Switch
+  platform: zwave
+  unique_id: 5-72057594126614528
+light.linear_wt00z1_3way_wall_accessory_switch_level:
+  config_entry_id:
+  name: Hallway Alt Light Switch
+  platform: zwave
+  unique_id: 5-72057594126630913
+sensor.kwikset_touchpad_electronic_deadbolt_alarm_type:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 6-72057594144636929
+sensor.kwikset_touchpad_electronic_deadbolt_alarm_level:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 6-72057594144636945
+zwave.kwikset_touchpad_electronic_deadbolt:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: node-6
+lock.kwikset_touchpad_electronic_deadbolt_locked:
+  config_entry_id:
+  name: Back Door Deadbolt
+  platform: zwave
+  unique_id: 6-72057594144391168
+media_player.dereks_ipad:
+  config_entry_id:
+  name:
+  platform: plex
+  unique_id: A703FAB9-C985-42ED-B7FA-BD4FFD8B9B2B
+zwave.linear_wd500z1_wall_dimmer_switch_2:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: node-7
+light.linear_wd500z1_wall_dimmer_switch_level_2:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 7-72057594160185345
+zwave.linear_wd500z1_wall_dimmer_switch_3:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: node-8
+light.linear_wd500z1_wall_dimmer_switch_level_3:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 8-72057594176962561
+media_player.fire_tv:
+  config_entry_id:
+  name:
+  platform: plex
+  unique_id: ba95250788f34d14-com-plexapp-android
+media_player.vierae60:
+  config_entry_id:
+  name:
+  platform: panasonic_viera
+  unique_id: 4D454930-0200-1000-8001-8CC1216E5AC2
+media_player.chrome_2:
+  config_entry_id:
+  name:
+  platform: plex
+  unique_id: ji8dgqltiqpgzdkc6ktrgdx1
+media_player.anas_ipad:
+  config_entry_id:
+  name:
+  platform: plex
+  unique_id: 408BC0E7-5E25-4F45-97C7-CE4B794E903A
+media_player.anas_iphone:
+  config_entry_id:
+  name:
+  platform: plex
+  unique_id: 7005F3A6-1F38-4702-87B3-72E6960B28E6
+media_player.chrome_3:
+  config_entry_id:
+  name:
+  platform: plex
+  unique_id: 2yuwhnqkn958r5htmti3g6zo
+media_player.marks_iphone:
+  config_entry_id:
+  name:
+  platform: plex
+  unique_id: 87E31395-C1AB-491E-9A33-F11C00293F03
+media_player.chrome_4:
+  config_entry_id:
+  name:
+  platform: plex
+  unique_id: djiwdknhhfas88s0cq9mmrs5
