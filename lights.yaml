@@ -49,3 +49,17 @@
   payload_available: "Online"
   payload_not_available: "Offline"
   retain: false
+
+#light.yeelight_test:
+- platform: yeelight
+  devices:
+    192.168.1.201:
+      name: "YeeLight Entry 1"
+    192.168.1.202:
+      name: "YeeLight Entry 2"
+
+- platform: group
+  name: "Front Entry Lights"
+  entities:
+    - light.yeelight_entry_1
+    - light.yeelight_entry_2

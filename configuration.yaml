@@ -30,7 +30,9 @@ http:
   # Secrets are defined in the file secrets.yaml
   # api_password: !secret http_password
   # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
-  # base_url: example.duckdns.org:8123
+#  base_url: https://ibold.tannert.net:8443
+#  ssl_certificate: /ssl/fullchain.pem
+#  ssl_key: /ssl/privkey.pem
 
 # Checks for available updates
 # Note: This component will send some information about your system to
@@ -96,14 +98,90 @@ panel_iframe:
   configurator:
     title: Configurator
     icon: mdi:wrench
-    url: http://172.24.1.3:3218/
+    url: http://192.168.1.5:3218/
   nodered:
     title: Node-Red
     icon: mdi:node-red
-    url: http://172.24.1.3:1880/
+    url: http://192.168.1.5:1880/
 
 # Cloud
 cloud:
+
+cover:
+  - platform: mqtt
+    name: "test"
+    state_topic: "cmnd/garage-door-sensor/POWER1"
+    command_topic: "cmnd/garage-door-controller/POWER"
+    state_open: "OFF"
+    state_closed: "ON"
+    payload_open: "ON"
+    payload_close: "ON"
+    payload_stop: "ON"
+    optomistic: false
+    retain: false
+
+# Cameras
+#camera:
+#  - platform: foscam
+#    ip: 192.168.1.81
+#    username: 
+#    password: 
+
+#sensor:
+#  - platform: darksky
+#    api_key: !secret darksky_apikey
+#    monitored_conditions:
+#      - summary
+#      - icon
+##      - nearest_storm_distance
+##      - nearest_storm_bearing
+##      - precip_type
+##      - precip_intensity
+#      - precip_probability
+#      - temperature
+##      - apparent_temperature
+##      - dew_point
+#      - wind_speed
+#      - wind_bearing
+##      - cloud_cover
+#      - humidity
+#      - pressure
+##      - visibility
+##      - ozone
+##      - minutely_summary
+##      - hourly_summary
+##      - daily_summary
+#      - temperature_max
+#      - temperature_min
+#      - apparent_temperature_max
+#      - apparent_temperature_min
+##      - precip_intensity_max  
+#
+#  - platform: mqtt
+#    state_topic: "cmnd/garage-door-sensor/POWER1"
+#    name: "Garage Door Status"
+#    payload_on: "ON"
+#    payload_off: "OF"
+#
+#  - platform: template
+#    sensors:
+#      garage_status:
+#        friendly_name: 'Garage Door Status'
+#        value_template: >-
+#          {%- if is_state('sensor.garage_door_status', 'ON') -%}
+#            Closed
+#          {%- elif is_state('sensor.garage_door_status', 'OFF') -%}
+#            Open
+#          {%- else -%}
+#            Unknown
+#          {%- endif %}
+#        icon_template: >-
+#          {%- if is_state("sensor.garage_door_status", "ON") -%}
+#            mdi:garage
+#          {%- else -%}
+#            mdi:garage-open
+#          {%- endif %}
+
 
 ####################################################
 #                                                  #
@@ -117,4 +195,11 @@ automation: !include automations.yaml
 script: !include scripts.yaml
 light: !include lights.yaml
 switch: !include switches.yaml
+sensor: !include sensors.yaml
+#sensor:
+#  - platform: darksky
+#    api_key: !secret darksky_apikey
+#    monitored_conditions:
+#      - summary
+#      - icon
 

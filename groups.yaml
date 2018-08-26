@@ -1,33 +1,143 @@
+############################################################
+# Views
+############################################################
 default_view:
   view: yes
   icon: mdi:home
   entities:
+    - group.garage
+    - group.entraces_all
+    - group.kids_room_all
+#    - group.hallway_all
+    - group.basement_all
+    - group.outside_all
+    - light.front_entry_lights
     - weather.dark_sky
-    - group.entraces
-    - group.kids_room
-    - group.basement
-    - group.outside
-kids_room:
+
+mydefault_view:
+  name: Lights
+  view: yes
+  entities:
+    - group.lights_groups
+############################################################
+
+garage:
+  name: Garage
+  icon: mdi:garage
+  entities:
+    - cover.test
+    - sensor.garage_status
+      
+
+############################################################
+# Summary Groups
+############################################################
+lights_groups:
+  name: Lights
+  entities:
+    - group.kids_room_lights
+    - group.hallway_lights
+    - group.basement_lights
+    - group.outside_lights
+    - group.front_entry_lights
+############################################################
+
+
+############################################################
+# Kid's Room
+############################################################
+kids_room_all:
   name: Kid's Room
-#  view: yes
   entities:
     - light.kids_room_light
     - light.kids_closet_light
-basement:
+
+kids_room_lights:
+  name: Kid's Room Lights
+  entities:
+    - light.kids_room_light
+    - light.kids_closet_light
+############################################################
+
+
+############################################################
+# Hallway
+############################################################
+#hallway_all:
+#  name: Hallway
+#  entities:
+#    - zwave.linear_wd500z1_wall_dimmer_switch_3
+#
+#hallway_lights:
+#  name: Hallway Lights
+#  entities:
+#    - zwave.linear_wd500z1_wall_dimmer_switch_3
+############################################################
+
+
+############################################################
+# Basement
+############################################################
+basement_all:
   name: Basement
-#  view: yes
   entities:
     - light.basement_stairs_light
-outside:
-  name: Outside Lights
-#  view: yes
+
+basement_lights:
+  name: Basement Lights
+  entities:
+    - light.basement_stairs_light
+############################################################
+
+
+############################################################
+# Outside
+############################################################
+outside_all:
+  name: Outside
   entities:
     - light.outside_flood_light__north
-entraces:
+
+outside_lights:
+  name: Outside Lights
+  entities:
+    - light.outside_flood_light__north
+############################################################
+
+
+############################################################
+# Entrances
+############################################################
+entraces_all:
   name: Entrances
   entities:
     - lock.kwikset_touchpad_electronic_deadbolt_locked
+############################################################
+
+
+############################################################
+# Front Entry
+############################################################
+#front_entry_all:
+#  name: Front Entry
+#  entities:
+#    - light.yeelight_entry_1
+#    - light.yeelight_entry_2
+#
+#front_entry_lights:
+#  name: Front Entry Lights
+#  entities:
+#    - light.yeelight_entry_1
+#    - light.yeelight_entry_2
+############################################################
+
+
+############################################################
+# Weather
+############################################################
 weather:
   name: Weather
+  view: yes
   entities:
     - weather.dark_sky
+############################################################
